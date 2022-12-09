@@ -13,3 +13,41 @@ git branch <branch_name>
 git checkout <branch_name>
 git merge <branch_name>
 git branch -d New_branch
+
+
+Tags
+To mark release points for your code/data
+To create historic restore points
+
+checkout the branch where you want to create the tag:
+	git checkout <branch_name>
+
+create tag with some name
+	git tag v1.0
+	git tag -a v1.1 -m "version 1.1 of v1.0"
+
+	git tag
+	git show v1.0
+	git tag -l "v.1*"
+
+	git push origin v1.0
+
+	git push origin --tags
+	git push --tags
+
+
+	Delete it from locally
+	git tag -d v1.0
+	git tag --delete v1.0
+
+	From repo
+	git push origin -d v1.0 v1.1 v1.2
+	git push origin --delete v1.0
+
+	git log
+
+	create tag from the past commit
+	 git tag <tag_name> <commit ref (few characters)>
+	 git tag v0.1 4e9aa30a97
+
+
